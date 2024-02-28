@@ -23,6 +23,7 @@ jobs:
         run: npm run build
 
       - name: Test
+        run: ls
         run: ./jenkins/scripts/test.sh
 
       - name: Deploy to S3

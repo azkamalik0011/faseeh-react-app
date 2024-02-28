@@ -23,8 +23,9 @@ jobs:
         run: npm run build
 
       - name: Test
-        run: ls
-        run: ./jenkins/scripts/test.sh
+        run:
+          - ls
+          - ./jenkins/scripts/test.sh
 
       - name: Deploy to S3
         run: aws s3 sync ./build/ s3://azka-react/

@@ -19,7 +19,7 @@ jobs:
       - name: push Docker Image
         run: |
           docker login --username azkadevops --password a01m132806
-          docker push azkadevops/nodejs:1.0
+          docker push azkadevops/react:1.0
 
 
 

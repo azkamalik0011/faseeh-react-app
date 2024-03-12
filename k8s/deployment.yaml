@@ -1,20 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
+  namespace: demo
+  name: freact
   labels:
     app: freact
-  name: freact
-  namespace: demo
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: freact
-  strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: freact
     spec:
@@ -23,7 +20,7 @@ spec:
         name: freact
         imagePullPolicy: Always
         ports:
-        - containerPort: 3001
+        - containerPort: 80
         env:
         - name: APP_TYPE
           valueFrom:
@@ -35,6 +32,3 @@ spec:
             configMapKeyRef:
               name: reactconfig
               key: profile
-
-        resources: {}
-status: {}

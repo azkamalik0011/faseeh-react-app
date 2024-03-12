@@ -18,7 +18,6 @@ jobs:
           docker build -t azkadevops/freact:2.1 .
       - name: push Docker Image
         run: |
-          docker login --username azkadevops --password a01m132806
           docker push azkadevops/freact:2.1
 
 

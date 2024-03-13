@@ -16,7 +16,7 @@ spec:
         app: freact
     spec:
       containers:
-      - image: azkadevops/freact:2.1
+      - image: azkadevops/freact:latest
         name: freact
         imagePullPolicy: Always
         ports:

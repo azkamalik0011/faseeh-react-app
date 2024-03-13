@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: demo
+  name: react-env
+data:
+  app: react
+  profile: dev 

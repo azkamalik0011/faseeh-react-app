@@ -21,6 +21,14 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 80
-        envFrom:
-        - configMapRef:
-            name: react-env
+        env:
+        - name: APP_TYPE
+          valueFrom:
+            configMapKeyRef:
+              name: react-env
+              key: app
+        - name: PROFILES
+          valueFrom:
+            configMapKeyRef:
+              name: react-env
+              key: profile
